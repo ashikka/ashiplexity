@@ -38,9 +38,6 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Streamlit
-.streamlit/
-
 # Uploaded files
 *.pdf
 *.docx
