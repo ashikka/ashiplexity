@@ -45,4 +45,5 @@ Thumbs.db
 *.pdf
 *.docx
 *.txt
-!documents/*.txt 
+!documents/*.txt
+!requirements.txt 
