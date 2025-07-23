@@ -176,9 +176,9 @@ st.markdown(
     /* Target sidebar elements */
     [data-testid="stSidebar"] {
         background-color: #1E2120 !important;
-        width: 200px !important;
-        min-width: 200px !important;
-        max-width: 200px !important;
+        width: 160px !important;
+        min-width: 160px !important;
+        max-width: 160px !important;
     }
     
     /* Sidebar content */
@@ -200,10 +200,10 @@ st.markdown(
     
     /* Chat bubbles */
     .user-bubble {
-        background: #222;
+        background: #383838;
         color: #ECECEC;
         padding: 12px 16px;
-        border-radius: 20px;
+        border-radius: 10px;
         margin: 8px 0;
         text-align: left;
         max-width: 80%;
@@ -253,10 +253,16 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+
 # Title and header
 col1, col2, col3 = st.columns([1, 1, 1])
 with col2:
     st.image("assets/title.png", width=300)
+
+
+col1, col2, col3 = st.columns([0.2,1,0.2])
+with col2:
+    st.markdown('<div style="text-align:center;">Hi! My name is Ashikka Gupta. This is a AI powered chat app built on top of Perplexity. You can use the text box below to learn more about me, or just chat!</div>', unsafe_allow_html=True)
 
 
 # Load documents function
@@ -359,74 +365,56 @@ if len(st.session_state.messages) == 0:
     st.markdown(
         '<div style="text-align: center; margin: 20px 0;">', unsafe_allow_html=True
     )
-    user_input = st.text_input(
+    user_input = st.text_area(
         "",
-        placeholder="Ask anything about Ashikka...",
+        placeholder="Ask anything about Ashikka!",
         label_visibility="collapsed",
         key="perplexity_input",
     )
     st.markdown("</div>", unsafe_allow_html=True)
 
-    # Apply Perplexity styling to the input
-    st.markdown(
-        """
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const input = document.querySelector('input[data-testid="stTextInput"]');
-        if (input) {
-            input.classList.add('perplexity-input');
-        }
-    });
-    </script>
-    """,
-        unsafe_allow_html=True,
-    )
 else:
     # Chat active state - input at bottom
     chat_input = st.chat_input("Ask anything about Ashikka...")
     if chat_input:
         user_input = chat_input
 
-if user_input:
-    # Add user message
-    st.session_state.messages.append({"role": "user", "content": user_input})
-    # Check for API key
-    if not api_key or api_key == "your_api_key_here":
-        error_msg = "❌ Please add your Perplexity API key to the .env file"
-        st.session_state.messages.append({"role": "assistant", "content": error_msg})
-    else:
-        # Get response and add to session state
-        try:
-            response = ask_perplexity_with_context(user_input, api_key, documents)
-            st.session_state.messages.append({"role": "assistant", "content": response})
-        except Exception as e:
-            error_msg = f"❌ Error: {str(e)}"
-            st.session_state.messages.append(
-                {"role": "assistant", "content": error_msg}
-            )
-    st.rerun()
+# Apply Perplexity styling to the input
+st.markdown(
+    """
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const input = document.querySelector('input[data-testid="stTextInput"]');
+    if (input) {
+        input.classList.add('perplexity-input');
+    }
+});
+</script>
+""",
+    unsafe_allow_html=True,
+)
 
 # Sidebar with social links
 with st.sidebar:
     st.markdown(
         """
     <div style="text-align: center; padding: 0; background-color: #1E2120;">
-        <h3 style="color: #ECECEC; margin-bottom: 20px;">Socials</h3>
+        <h3 style="color: #ECECEC; margin-bottom: 20px;">Ashikka's Socials</h3>
         <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
             <a href="https://www.linkedin.com/in/ashikka-gupta/" target="_blank" style="text-decoration: none; color: #ECECEC; display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; transition: background 0.3s;">
-                <span style="font-size: 20px;">🔗</span>
+                <span style="width: 20px;"><img style="width: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/960px-LinkedIn_logo_initials.png" /></span>
                 <span>LinkedIn</span>
             </a>
             <a href="https://youtu.be/-r5PEEKaoTs?si=lbjiXHztyDnlj7GD" target="_blank" style="text-decoration: none; color: #ECECEC; display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; transition: background 0.3s;">
-                <span style="font-size: 20px;">📺</span>
+                <span style="font-size: 20px;"><img style="width: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" /></span>
                 <span>YouTube</span>
             </a>
             <a href="https://ashikka.medium.com/" target="_blank" style="text-decoration: none; color: #ECECEC; display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; transition: background 0.3s;">
-                <span style="font-size: 20px;">📝</span>
+                <span style="font-size: 20px;"><img style="width: 20px;" src="https://cdn-icons-png.flaticon.com/256/5968/5968906.png" /></span>
                 <span>Medium</span>
             </a>
             <a href="https://github.com/ashikka" target="_blank" style="text-decoration: none; color: #ECECEC; display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; transition: background 0.3s;">
-                <span style="font-size: 20px;">💻</span>
+                <span style="font-size: 20px;"><img style="width: 20px;" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png" /></span>
                 <span>GitHub</span>
             </a>
             <a href="https://docs.google.com/document/d/1bx32f4hTLgGIyblQ3tgI2ND8ezQccYw6youj_fJkg60/edit?tab=t.0" target="_blank" style="text-decoration: none; color: #ECECEC; display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; transition: background 0.3s;">
@@ -438,10 +426,17 @@ with st.sidebar:
     """,
         unsafe_allow_html=True,
     )
+    st.text("")
+    # Clear chat button - only show when there are messages
+    if len(st.session_state.messages) > 0:
+        if st.button("🗑️ Clear Chat"):
+            st.session_state.messages = []
+            st.rerun()
 
 
 # Main chat area - only show when there are messages
 if len(st.session_state.messages) >= 0:
+    st.text("")
     # Display chat history
     for message in st.session_state.messages:
         if message["role"] == "user":
@@ -494,13 +489,39 @@ if len(st.session_state.messages) >= 0:
                 unsafe_allow_html=True,
             )
 
+    if user_input:
+        # Add user message
+        st.session_state.messages.append({"role": "user", "content": user_input})
+        # Check for API key
+        if not api_key or api_key == "your_api_key_here":
+            error_msg = "❌ Please add your Perplexity API key to the .env file"
+            st.session_state.messages.append({"role": "assistant", "content": error_msg})
+        else:
+            col1, col2, col3, col4, col5 = st.columns(5)
+            with col3:
+                with st.spinner("ashiplexity is thinking...."):
+                    st.text(" ")
+                    st.text(" ")
+                    # Get response and add to session state
+                    try:
+                        response = ask_perplexity_with_context(user_input, api_key, documents)
+                        st.session_state.messages.append({"role": "assistant", "content": response})
+                    except Exception as e:
+                        error_msg = f"❌ Error: {str(e)}"
+                        st.session_state.messages.append(
+                            {"role": "assistant", "content": error_msg}
+                        )
+        st.rerun()
+    
+    if len(st.session_state.messages) == 0:
+        st.markdown('<div style="text-align:center; margin-bottom: 10px;">Here are some cool things we can talk about!</div>', unsafe_allow_html=True)
     # Quick prompt buttons - show in initial state below input
     # Show quick prompts in initial state
     st.markdown(
         '<div style="text-align: center; hover:margin: 20px 0;">',
         unsafe_allow_html=True,
     )
-    col1, col2, col3, col4 = st.columns(4)
+    col0, col1, col2, col3, col4, col5 = st.columns([0.5,1,1,1,1,0.5])
 
     with col1:
         if st.button("Most impactful project?", key="prompt1"):
@@ -515,10 +536,11 @@ if len(st.session_state.messages) >= 0:
                 )
             else:
                 try:
-                    response = ask_perplexity_with_context(query, api_key, documents)
-                    st.session_state.messages.append(
-                        {"role": "assistant", "content": response}
-                    )
+                    with st.spinner("ashiplexity is thinking...."):
+                        response = ask_perplexity_with_context(query, api_key, documents)
+                        st.session_state.messages.append(
+                            {"role": "assistant", "content": response}
+                        )
                 except Exception as e:
                     error_msg = f"❌ Error: {str(e)}"
             st.rerun()
@@ -536,10 +558,11 @@ if len(st.session_state.messages) >= 0:
                 )
             else:
                 try:
-                    response = ask_perplexity_with_context(query, api_key, documents)
-                    st.session_state.messages.append(
-                        {"role": "assistant", "content": response}
-                    )
+                    with st.spinner("ashiplexity is thinking...."):
+                        response = ask_perplexity_with_context(query, api_key, documents)
+                        st.session_state.messages.append(
+                            {"role": "assistant", "content": response}
+                        )
                 except Exception as e:
                     error_msg = f"❌ Error: {str(e)}"
                     st.session_state.messages.append(
@@ -560,10 +583,11 @@ if len(st.session_state.messages) >= 0:
                 )
             else:
                 try:
-                    response = ask_perplexity_with_context(query, api_key, documents)
-                    st.session_state.messages.append(
-                        {"role": "assistant", "content": response}
-                    )
+                    with st.spinner("ashiplexity is thinking...."):
+                        response = ask_perplexity_with_context(query, api_key, documents)
+                        st.session_state.messages.append(
+                            {"role": "assistant", "content": response}
+                        )
                 except Exception as e:
                     error_msg = f"❌ Error: {str(e)}"
                     st.session_state.messages.append(
@@ -584,10 +608,11 @@ if len(st.session_state.messages) >= 0:
                 )
             else:
                 try:
-                    response = ask_perplexity_with_context(query, api_key, documents)
-                    st.session_state.messages.append(
-                        {"role": "assistant", "content": response}
-                    )
+                    with st.spinner("ashiplexity is thinking...."):
+                        response = ask_perplexity_with_context(query, api_key, documents)
+                        st.session_state.messages.append(
+                            {"role": "assistant", "content": response}
+                        )
                 except Exception as e:
                     error_msg = f"❌ Error: {str(e)}"
                     st.session_state.messages.append(
@@ -597,12 +622,6 @@ if len(st.session_state.messages) >= 0:
 
     st.markdown("</div>", unsafe_allow_html=True)
 
-
-# Clear chat button - only show when there are messages
-if len(st.session_state.messages) > 0:
-    if st.button("🗑️ Clear Chat"):
-        st.session_state.messages = []
-        st.rerun()
 
 # Footer
 st.markdown(
