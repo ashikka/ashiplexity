@@ -474,7 +474,7 @@ if len(st.session_state.messages) >= 0:
                 try:
                     # Display vacation images in a grid
                     st.markdown("**Here are some photos from my island adventures:**")
-                    col1, col2 = st.columns(2)
+                    col0, col1, col2, col4 = st.columns(4)
                     with col1:
                         st.image(
                             "vacation/pic_1.jpeg",
