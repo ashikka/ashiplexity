@@ -246,6 +246,24 @@ st.markdown(
     [data-testid="stBottomBlockContainer"] {
         background-color: #181B1A !important;
     }
+
+.loader {
+  width: 60px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side,#fff 90%,#0000);
+  background: 
+    var(--_g) 0%   50%,
+    var(--_g) 50%  50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+    20%{background-position:0%   0%, 50%  50%,100%  50%}
+    40%{background-position:0% 100%, 50%   0%,100%  50%}
+    60%{background-position:0%  50%, 50% 100%,100%   0%}
+    80%{background-position:0%  50%, 50%  50%,100% 100%}
+}
     
 
 </style>
@@ -499,18 +517,21 @@ if len(st.session_state.messages) >= 0:
         else:
             col1, col2, col3, col4, col5 = st.columns(5)
             with col3:
-                with st.spinner("ashiplexity is thinking...."):
-                    st.text(" ")
-                    st.text(" ")
-                    # Get response and add to session state
-                    try:
-                        response = ask_perplexity_with_context(user_input, api_key, documents)
-                        st.session_state.messages.append({"role": "assistant", "content": response})
-                    except Exception as e:
-                        error_msg = f"❌ Error: {str(e)}"
-                        st.session_state.messages.append(
-                            {"role": "assistant", "content": error_msg}
-                        )
+                loader_placeholder = st.empty()
+                loader_placeholder.markdown('<div style="margin-left:60px" class="loader"></div>', unsafe_allow_html=True)
+
+                st.text(" ")
+                st.text(" ")
+                # Get response and add to session state
+                try:
+                    response = ask_perplexity_with_context(user_input, api_key, documents)
+                    st.session_state.messages.append({"role": "assistant", "content": response})
+                except Exception as e:
+                    error_msg = f"❌ Error: {str(e)}"
+                    st.session_state.messages.append(
+                        {"role": "assistant", "content": error_msg}
+                    )
+                loader_placeholder.empty()
         st.rerun()
     
     if len(st.session_state.messages) == 0:
@@ -536,11 +557,13 @@ if len(st.session_state.messages) >= 0:
                 )
             else:
                 try:
-                    with st.spinner("ashiplexity is thinking...."):
-                        response = ask_perplexity_with_context(query, api_key, documents)
-                        st.session_state.messages.append(
-                            {"role": "assistant", "content": response}
-                        )
+                    loader_placeholder = st.empty()
+                    loader_placeholder.markdown('<div style="margin-left:60px" class="loader"></div>', unsafe_allow_html=True)
+                    response = ask_perplexity_with_context(query, api_key, documents)
+                    st.session_state.messages.append(
+                        {"role": "assistant", "content": response}
+                    )
+                    loader_placeholder.empty()
                 except Exception as e:
                     error_msg = f"❌ Error: {str(e)}"
             st.rerun()
@@ -558,11 +581,13 @@ if len(st.session_state.messages) >= 0:
                 )
             else:
                 try:
-                    with st.spinner("ashiplexity is thinking...."):
-                        response = ask_perplexity_with_context(query, api_key, documents)
-                        st.session_state.messages.append(
-                            {"role": "assistant", "content": response}
-                        )
+                    loader_placeholder = st.empty()
+                    loader_placeholder.markdown('<div style="margin-left:60px" class="loader"></div>', unsafe_allow_html=True)
+                    response = ask_perplexity_with_context(query, api_key, documents)
+                    st.session_state.messages.append(
+                        {"role": "assistant", "content": response}
+                    )
+                    loader_placeholder.empty()
                 except Exception as e:
                     error_msg = f"❌ Error: {str(e)}"
                     st.session_state.messages.append(
@@ -583,11 +608,13 @@ if len(st.session_state.messages) >= 0:
                 )
             else:
                 try:
-                    with st.spinner("ashiplexity is thinking...."):
-                        response = ask_perplexity_with_context(query, api_key, documents)
-                        st.session_state.messages.append(
-                            {"role": "assistant", "content": response}
-                        )
+                    loader_placeholder = st.empty()
+                    loader_placeholder.markdown('<div style="margin-left:60px" class="loader"></div>', unsafe_allow_html=True)
+                    response = ask_perplexity_with_context(query, api_key, documents)
+                    st.session_state.messages.append(
+                        {"role": "assistant", "content": response}
+                    )
+                    loader_placeholder.empty()
                 except Exception as e:
                     error_msg = f"❌ Error: {str(e)}"
                     st.session_state.messages.append(
@@ -608,11 +635,13 @@ if len(st.session_state.messages) >= 0:
                 )
             else:
                 try:
-                    with st.spinner("ashiplexity is thinking...."):
-                        response = ask_perplexity_with_context(query, api_key, documents)
-                        st.session_state.messages.append(
-                            {"role": "assistant", "content": response}
-                        )
+                    loader_placeholder = st.empty()
+                    loader_placeholder.markdown('<div style="margin-left:60px" class="loader"></div>', unsafe_allow_html=True)
+                    response = ask_perplexity_with_context(query, api_key, documents)
+                    st.session_state.messages.append(
+                        {"role": "assistant", "content": response}
+                    )
+                    loader_placeholder.empty()
                 except Exception as e:
                     error_msg = f"❌ Error: {str(e)}"
                     st.session_state.messages.append(
