@@ -1,0 +1,144 @@
+# Ashikka Gupta - Ashiplexity Project Text Corpus
+
+This document compiles information about Ashikka Gupta's professional experience, skills, achievements, and projects, serving as a comprehensive text corpus for the 'ashiplexity' project. The information is gathered from her resume, Medium profile, LinkedIn profile, and GitHub repositories.
+
+## 1. Executive Summary
+
+Ashikka Gupta is a product manager with a strong background in software development and a passion for driving business growth through innovative strategies and empathetic thinking. She has experience in AI-powered product development, sales enablement, connected vehicle analytics, and mobile application enhancement. Her expertise spans product strategy, market research, GTM strategy, data analytics, and agile methodologies. Ashikka has a proven track record of leadership, having held key positions in student organizations and successfully delivered impactful projects and products.
+
+## 2. Professional Experience
+
+### Rapidflare (Nov 2024 - Present)
+
+**Founding Member, Product Manager**
+
+*   Co-developed product vision and translated business needs into PRDs, user stories, and wireframes for AI-powered sales enablement suite.
+*   Defined and executed product strategy for AI-driven product selection agent and specialized agents (conversation agent, sales call agent), now used by 2,000+ users.
+*   Built and launched an AI-powered conversation analytics system leveraging LLMs to analyze 100K+ customer conversations, extracting qualitative insights and shaping product roadmap.
+
+### Motorq (Jan 2023 - Nov 2024)
+
+**Associate Product Manager**
+
+*   Youngest Product Manager, leading cross-functional teams and managing sprint planning for a connected vehicle analytics platform.
+*   Launched Motorq’s fuel product, achieving 75% adoption, saving customers $50k, and driving revenue growth.
+*   Defined product vision and roadmap for AI initiatives, leading a team to develop a contextual chatbot.
+*   Implemented Mixpanel analytics, driving a 30% feature adoption increase.
+*   Spearheaded EU expansion, ensuring GDPR compliance and onboarding the first EU customer, unlocking $100k in revenue.
+
+**Product Manager Intern** (Jan 2023 - May 2023)
+
+*   Gained experience in agile methodologies and product management.
+
+### Mitacs Globalink Research (July 2022 - Oct 2022)
+
+**Research Assistant** at UBC Vancouver, Canada
+
+*   Selected as one of 283 out of 30,000 applicants globally (<1% acceptance rate) for research project “Automated Runtime System for Next-Generation IoT Systems.”
+*   Resolved legacy code issues, improving maintainability and system reliability.
+*   Created an application builder to visualize input/output and system metrics for distributed environments.
+
+### Adobe (May 2022 - July 2022)
+
+**Software Developer Intern**
+
+*   Enhanced Photoshop Elements Android app (10k downloads) by crafting multiple screens with Android Studio and Java.
+*   Built production-ready features, identified and rectified app functional gaps, boosting file upload speed by 50%.
+*   Collaborated with developers, designers, and managers to ship high-quality updates and fix race conditions for cloud data synchronization.
+
+## 3. Education
+
+*   **Vellore Institute of Technology** (July 2019 - Aug 2023)
+    *   Bachelor of Technology, Computer Science; Cumulative GPA: 9.15/10
+*   **Loreto Convent Intermediate College** (March 2009 - March 2019)
+    *   ISC: 91.6%, ISCE: 93.2%
+
+## 4. Skills
+
+*   **Product Strategy and Planning:** Product Strategy, Market Research, Product Innovation, Business Analysis, GTM Strategy, Metrics-driven Thinking, Data Analytics, A/B Testing, Sprint Planning, Marketing, Customer Research, Empathy
+*   **Product Execution:** Agile Thinking, Product Life Cycle Development, UX Design and Thinking, Performance Metrics
+*   **Tools and Technical Skills:** JIRA, Confluence, Snowflake, Mixpanel, Figma, Python, Tableau, Grafana
+*   **AI/ML Technologies:** LLMs, Prompt Engineering, RAG (Retrieval Augmented Generation)
+*   **Programming & Tools:** Python, LangChain, OpenAI API, Data Pipelines, Snowflake, Grafana, JavaScript, Node.js, XML, Java, Kotlin, HTML, SCSS, C#
+
+## 5. Achievements and Awards
+
+*   **Chainlink Spring 2023 Hackathon Winner** (May 2023)
+    *   Won $500 for “Top Quality Projects” among 14,000+ registrants.
+    *   Created a Chainlink function for off-chain verification of academic research user profiles using Google Scholar.
+*   **NetApp Women Innovathon 2021-2022 First Runner Up** (June 2022)
+    *   Won 2nd place among 3,500 applicants and 900 teams, awarded ₹150,000.
+    *   Developed 'PeerReview' using Ethereum and Blockchain for decentralized academic paper peer-reviewing.
+
+## 6. Leadership
+
+### Computer Society Of India - VIT Chapter
+
+**Vice Chair** (July 2021 - April 2023)
+
+*   Supervised 10+ events and day-to-day operations, raised funds, and organized workshops.
+*   Mentored 20+ juniors, focusing on female juniors for resume building and technical interviews.
+
+**Core Committee Member** (Dec 2019 - Jul 2021)
+
+*   Spearheaded infrastructure for various events.
+*   Developed frontend and backend solutions.
+
+## 7. Case Studies/Blogs (Medium)
+
+*   **Why Quick Commerce in India is Miles Ahead** (Dec 27, 2024)
+*   **Product Case Study — Monetizing Twitter The Right Way** (Jul 4, 2023)
+*   **Apple’s Bold Gamble with Apple Vision Pro — A Smart Move or a Risky Misstep** (Aug 22, 2023)
+*   **Unlocking the Power of LLMs: The Art of Prompt Engineering** (Apr 2)
+*   **Product Case Study: Elevating Social Features on Spotify** (Jun 13, 2023)
+*   **Embracing Inclusion: Why Diversity Hiring is Necessary** (Jan 10, 2023)
+*   **How I Bagged a Research Internship in Canada…** (Jul 25, 2022)
+*   **Dev-Centric Internships** (Mar 14, 2022)
+*   **Unwinding My MLH Journey** (Jan 23, 2022)
+*   **Building an Image Search Plugin for Photoshop** (Jan 5, 2022)
+*   **Oversimplified — Bug Bounty** (Jan 1, 2022)
+*   **Oversimplified — code-executor** (Jan 28, 2021)
+*   **Build Your First Responsive Flutter Web App** (Dec 4, 2020)
+*   **Publicity and Collabs for your CTF** (Aug 27, 2020)
+
+## 8. GitHub Projects
+
+*   **ashiplexity:** The curious complexity of Ashikka
+*   **peer-review-chainlink:** A Decentralized Academic Publishing System Using Smart Contracts (TypeScript)
+*   **code-executor:** A CLI/library to execute code against test cases in various languages (TypeScript)
+*   **golf-it:** A game designed to let you show off your code-fu by solving problems in the least number of characters (JavaScript)
+*   **sike-service:** Backend repository for Sike (TypeScript)
+*   **cc-libraries-api-samples:** Forked from AdobeDocs/cc-libraries-api-samples (JavaScript)
+*   **Newsletter-Signup:** (HTML)
+*   **android-test:** (Kotlin)
+*   **ethwmn-coursework:** (JavaScript)
+*   **uxp-photoshop-plugin-samples:** UXP Plugin samples for Photoshop 22 and higher (JavaScript)
+*   **ashikka:** (No description available)
+*   **wasp:** (Go)
+*   **blog:** (SCSS)
+*   **uxp-photoshop:** Documentation for UXP Plugin API - Adobe Photoshop 2022 - apiVersion 2 (JavaScript)
+*   **omen-cli:** Forked from thebongy/omen-cli (C#)
+*   **kollections:** Kotlin open source library for data structures (Kotlin)
+*   **motorq-service:** Backend repository for motorq task (TypeScript)
+*   **motorq-client:** Frontend repository for motorq task (JavaScript)
+*   **handwritten.js:** Convert typed text to realistic handwriting! (JavaScript)
+*   **demo-project:** (JavaScript)
+*   **sike-web-client:** Frontend repository for Sike (No language specified)
+*   **blitz:** The Fullstack React Framework — built on Next.js (JavaScript)
+*   **winx:** A CLI to generate CLIs (JavaScript)
+*   **CodeGolf-Frontend:** A React.js Frontend for a Code Golf platform (JavaScript)
+*   **NLP-Project:** (Jupyter Notebook)
+*   **cowin-vaccine-notifier:** Check for available vaccination slots in your location(India) and receive a call when slots are available (Python)
+*   **learn-kotlin:** I learn kotlin. (Kotlin)
+*   **Grammast:** (No language specified)
+*   **Kuwu:** A discord bot for csictf 2020! (Python)
+*   **email-service:** A collection of frequently needed microservices (JavaScript)
+
+## 9. References
+
+*   [Ashikka Gupta Resume](file:///home/ubuntu/upload/AshikkaGuptaResumeLatest.pdf)
+*   [Ashikka Gupta Medium Profile](https://ashikka.medium.com/)
+*   [Ashikka Gupta LinkedIn Profile](https://www.linkedin.com/in/ashikka-gupta/)
+*   [Ashikka Gupta GitHub Profile](https://github.com/ashikka)
+
+
