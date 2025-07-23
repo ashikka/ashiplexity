@@ -288,7 +288,23 @@ def ask_perplexity_with_context(query, api_key, documents=None):
             context += f"--- {filename} ---\n{content}\n\n"
 
     # Create the full prompt
-    full_prompt = f"{context}Question: {query}\n\nPlease answer based on the information provided above."
+    full_prompt = f"""{context}Question: {query}
+
+Please provide a clear, engaging, and well-structured answer based on the information provided above. 
+
+Guidelines:
+- Write in a friendly, conversational tone that feels personal
+- Keep your response concise and focused (aim for 2-3 paragraphs)
+- Use markdown formatting to improve readability:
+  - **Bold** important points and key achievements
+  - Use bullet points (-) for lists and key details
+  - Add ### headers for different topics when helpful
+- Include specific examples and details when available
+- If information is limited, be honest about it
+- Make the response feel authentic to Ashikka's voice and experience
+- Structure with clear sections and bullet points for easy reading
+
+Answer:"""
 
     headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
 
@@ -401,7 +417,7 @@ with st.sidebar:
                 <span style="font-size: 20px;">🔗</span>
                 <span>LinkedIn</span>
             </a>
-            <a href="https://youtube.com/@ashikkagupta" target="_blank" style="text-decoration: none; color: #ECECEC; display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; transition: background 0.3s;">
+            <a href="https://youtu.be/-r5PEEKaoTs?si=lbjiXHztyDnlj7GD" target="_blank" style="text-decoration: none; color: #ECECEC; display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; transition: background 0.3s;">
                 <span style="font-size: 20px;">📺</span>
                 <span>YouTube</span>
             </a>
@@ -434,8 +450,47 @@ if len(st.session_state.messages) >= 0:
                 unsafe_allow_html=True,
             )
         else:
+            # Render bot messages with proper markdown
             st.markdown(
-                f'<div class="bot-bubble">{message["content"]}</div>',
+                f'<div class="bot-bubble">',
+                unsafe_allow_html=True,
+            )
+            st.markdown(message["content"])
+
+            # Check if this is the response to prompt 4 (beaches/mountains question)
+            if (
+                "beaches or mountains" in message["content"].lower()
+                or "island" in message["content"].lower()
+            ):
+                try:
+                    # Display vacation images in a grid
+                    st.markdown("**Here are some photos from my island adventures:**")
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        st.image(
+                            "vacation/pic_1.jpeg",
+                            caption="Broken Beach - Nusa Penida",
+                            width=200,
+                        )
+                        st.image(
+                            "vacation/pic_3.jpeg",
+                            caption="Yellow Bridge - Nusa Ceningan",
+                            width=200,
+                        )
+                    with col2:
+                        st.image(
+                            "vacation/pic_2.jpeg", caption="Street in Gili T", width=200
+                        )
+                        st.image(
+                            "vacation/pic_4.jpeg",
+                            caption="Sunset in Gili Air",
+                            width=200,
+                        )
+                except Exception as e:
+                    st.markdown("*Images not available*")
+
+            st.markdown(
+                "</div>",
                 unsafe_allow_html=True,
             )
 
@@ -445,7 +500,7 @@ if len(st.session_state.messages) >= 0:
         '<div style="text-align: center; hover:margin: 20px 0;">',
         unsafe_allow_html=True,
     )
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
 
     with col1:
         if st.button("Most impactful project?", key="prompt1"):
@@ -469,8 +524,8 @@ if len(st.session_state.messages) >= 0:
             st.rerun()
 
     with col2:
-        if st.button("Approach to discovery?", key="prompt2"):
-            query = "What is Ashikka's approach to product discovery?"
+        if st.button("Why AI startup at 23?", key="prompt2"):
+            query = "Why did Ashikka become a founding member of an AI startup at 23?"
             st.session_state.messages.append({"role": "user", "content": query})
 
             # Check for API key and make API call
@@ -495,6 +550,30 @@ if len(st.session_state.messages) >= 0:
     with col3:
         if st.button("Why Perplexity APM?", key="prompt3"):
             query = "Why did Ashikka choose Perplexity for APM?"
+            st.session_state.messages.append({"role": "user", "content": query})
+
+            # Check for API key and make API call
+            if not api_key or api_key == "your_api_key_here":
+                error_msg = "❌ Please add your Perplexity API key to the .env file"
+                st.session_state.messages.append(
+                    {"role": "assistant", "content": error_msg}
+                )
+            else:
+                try:
+                    response = ask_perplexity_with_context(query, api_key, documents)
+                    st.session_state.messages.append(
+                        {"role": "assistant", "content": response}
+                    )
+                except Exception as e:
+                    error_msg = f"❌ Error: {str(e)}"
+                    st.session_state.messages.append(
+                        {"role": "assistant", "content": error_msg}
+                    )
+            st.rerun()
+
+    with col4:
+        if st.button("Beaches or mountains?", key="prompt4"):
+            query = "What does Ashikka prefer, beaches or mountains?"
             st.session_state.messages.append({"role": "user", "content": query})
 
             # Check for API key and make API call

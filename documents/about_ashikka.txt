@@ -142,3 +142,63 @@ Ashikka Gupta is a product manager with a strong background in software developm
 *   [Ashikka Gupta GitHub Profile](https://github.com/ashikka)
 
 
+## Why does Ashikka want to become a Perplexity APM 
+I'm applying to become a Perplexity APM because your mission to bring trusted, direct knowledge to users aligns deeply with the problems I’ve been working on. My curiosity has taken me across different domains—from shipping Motorq's first fuel product with OEM integrations, to building an AI startup focused on helping users understand technical documents. Through it all, I’ve realized the common thread: users crave clarity, but most tools just give them content.
+
+I want to build tools that genuinely help people understand.
+
+Perplexity represents the future of how people interact with information: fast, verifiable, and user-first. I’ve already spent the last year thinking deeply about reasoning models, context engineering, and user trust. At RapidFlare, I led work on building guided workflows for users selecting complex electronics for a global electronics company—all powered by AI. The parallels are clear.
+
+I believe the APM program would not only hone my product thinking, but also place me in a community of peers who are just as obsessed with quality, clarity, and solving real-world problems at scale.
+
+
+##  What has been her most impactful project?
+
+Building RapidFlare’s real-time analytics pipeline was the most impactful project I led. I designed it to analyze 100K+ AI-user conversations across complex technical domains and surface actionable insights—from lead qualification patterns to knowledge gaps—directly into dashboards and GPT workflows.
+
+The pipeline became a key market differentiator, turning RapidFlare from a chatbot product into a learning engine for enterprise sales. It powered features like conversation difficulty scoring, auto-tagging, rep performance summaries, and weekly trend reports. Our largest customers now rely on it to train reps, refine messaging, and understand user needs at scale.
+
+It stood out because it combined deep LLM reasoning with fast ETL design and customer-facing UX. I owned it end-to-end—from writing retrieval logic and prompt templates to building dashboards and demoing to GTM teams. It taught me how to ship high-leverage systems fast while keeping real user impact at the center.
+
+
+## Why AI startup at 23?
+
+As a founding member of RapidFlare, I was driven by the opportunity to solve a real user problem: helping people learn complex products faster. At 23, I saw how AI could transform onboarding and sales enablement by turning static documents into interactive, conversational experiences.
+
+I wasn’t just excited by the hype—I was deep in the weeds, working on retrieval pipelines, reasoning models, and context engineering. I wanted to be at the frontier, not on the sidelines. Starting young gave me the agility to experiment fast, wear multiple hats, and learn directly from users.
+
+As a founding member at Rapidflare helped me apply what I’d learned across GTM, product, and engineering—from launching our analytics engine to building contextual copilot flows that now serve enterprise customers in semiconductors and electronics.
+
+Most of all, it taught me how to pair conviction with humility: to be technical but user-obsessed, fast but thoughtful, and always focused on impact.
+
+## Beaches or Mountains 
+
+Neither, I like Islands the best! My favorite islands so far are Cat Ba in Vietnam and Gili Air in Indonesia. 
+
+**Why Islands?**
+- Perfect balance of adventure and relaxation
+- Best of both worlds - you get beaches AND mountains on most islands
+- More intimate, less touristy than mainland destinations
+- Unique culture and slower pace of life
+
+**My Island Activities:**
+- **Snorkeling** - Love exploring coral reefs and marine life
+- **Kayaking** - Paddle around hidden coves and crystal clear waters
+- **Island hopping** - Discover new beaches and viewpoints
+- **Local food exploration** - Fresh seafood and authentic island cuisine
+- **Sunset watching** - Nothing beats island sunsets
+
+**Favorite Memories:**
+- **Cat Ba, Vietnam** - Kayaking through limestone karsts and exploring hidden caves
+- **Gili Air, Indonesia** - Snorkeling with sea turtles and watching the most incredible sunsets
+- **Island life pace** - No cars, just bikes and boats, perfect for disconnecting
+
+**Travel Philosophy:**
+I prefer the intimate, adventurous feel of islands over crowded beaches or touristy mountain resorts. Islands offer that perfect mix of natural beauty, adventure activities, and cultural immersion that I love.
+
+*Note: I have pictures from my island adventures but they're not uploaded here yet!* 
+
+![Island vacation photo](vacation/pic_1.jpeg)
+![Island vacation photo](vacation/pic_2.jpeg)
+![Island vacation photo](vacation/pic_3.jpeg)
+![Island vacation photo](vacation/pic_4.jpeg)
