@@ -73,8 +73,8 @@ st.markdown(
     
         /* Quick prompt button hover effect */
     .stButton > button:hover {
-        border-color: #31B9C7 !important;
-        color: #31B9C7 !important;
+        border-color: #ffffff !important;
+        color: #ffffff !important;
         background-color: transparent !important;
     }
     
@@ -94,8 +94,8 @@ st.markdown(
     
     /* Quick prompt button hover effect */
     .stButton > button:hover {
-        border-color: #31B9C7 !important;
-        color: #31B9C7 !important;
+        border-color: #ffffff !important;
+        color: #ffffff !important;
         background-color: transparent !important;
     }
     
@@ -121,13 +121,13 @@ st.markdown(
     }
     
     input[data-testid="stTextInput"]:focus {
-        border-color: #31B9C7 !important;
+        border-color: #ffffff !important;
         outline: none !important;
     }
     
     input[data-testid="stTextInput"]:hover {
-        border-color: #31B9C7 !important;
-        box-shadow: 0 0 0 1px #31B9C7 !important;
+        border-color: #ffffff !important;
+        box-shadow: 0 0 0 1px #ffffff !important;
     }
     
     input[data-testid="stTextInput"]:active {
@@ -145,20 +145,16 @@ st.markdown(
     
     input[data-testid="stTextInput"][aria-invalid="true"]:focus,
     input[data-testid="stTextInput"].stTextInputError:focus {
-        border-color: #31B9C7 !important;
+        border-color: #ffffff !important;
         outline: none !important;
     }
     
     input[data-testid="stTextInput"][aria-invalid="true"]:hover,
     input[data-testid="stTextInput"].stTextInputError:hover {
-        border-color: #31B9C7 !important;
-        box-shadow: 0 0 0 1px #31B9C7 !important;
+        border-color: #ffffff !important;
+        box-shadow: 0 0 0 1px #ffffff !important;
     }
-    
-    .perplexity-input:focus {
-        outline: none !important;
-        border-color: #31B9C7 !important;
-    }
+
     
     /* Center title image both horizontally and vertically */
     .stImage {
@@ -248,14 +244,14 @@ st.markdown(
     }
 
 .loader {
-  width: 60px;
+  width: 50px;  /* previously 60px */
   aspect-ratio: 2;
-  --_g: no-repeat radial-gradient(circle closest-side,#fff 90%,#0000);
+  --_g: no-repeat radial-gradient(circle closest-side, #fff 80%, #0000); /* 90% → 70% */
   background: 
     var(--_g) 0%   50%,
     var(--_g) 50%  50%,
     var(--_g) 100% 50%;
-  background-size: calc(100%/3) 50%;
+  background-size: calc(100% / 3) 40%;  /* previously 50% */
   animation: l3 1s infinite linear;
 }
 @keyframes l3 {
